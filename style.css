@@ -1,0 +1,21 @@
+/* First box: light blue background with a double tomato border */
+.box-one {
+  background-color: lightblue; [cite: 517]
+  border: 5px double Tomato; [cite: 485, 675]
+  padding: 10px; [cite: 1049]
+}
+
+/* Second box: yellow background with a solid blue border and rounded corners */
+.box-two {
+  background-color: yellow; [cite: 520]
+  border: 2px solid DodgerBlue; [cite: 486, 686]
+  border-radius: 15px; [cite: 852]
+  padding: 10px; 
+}
+
+/* Third box: green background with a dotted grey border */
+.box-three {
+  background-color: MediumSeaGreen; [cite: 460]
+  border: 10px dotted Gray; [cite: 675, 717]
+  padding: 10px; [cite: 1014]
+}
