@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>ex26</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 50px;
+            background-color: #f9f9f9;
+        }
+
+        /* 通用樣式：左圖與右圖 */
+        .responsive-img {
+            width: 33%;
+            height: 300px; /* 設定固定高度來觀察變形效果 */
+        }
+
+        /* 左圖：維持比例，不變形 */
+        .no-distortion {
+            border-radius: 18px;
+            object-fit: cover; /* 關鍵：維持比例並填滿，會裁切但不會變形 */
+        }
+
+        /* 中圖：圓形樣式 */
+        .circle-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* 寬高相等時，50% 即為正圓 */
+            border: 1px solid #333;
+            object-fit: cover; /* 維持比例 */
+        }
+
+        /* 右圖：強行拉伸（變形） */
+        .distortion {
+            object-fit: fill; /* 關鍵：預設或強制填滿，會導致圖片拉伸變形 */
+        }
+    </style>
+</head>
+<body>
+
+    <img src="https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?w=600" 
+         alt="Eiffel Tower" class="responsive-img no-distortion">
+
+    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=300" 
+         alt="Mountain" class="circle-img">
+
+    <img src="https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?w=600" 
+         alt="Eiffel Tower" class="responsive-img distortion">
+
+</body>
+</html>
