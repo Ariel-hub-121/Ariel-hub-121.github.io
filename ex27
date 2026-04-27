@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex27</title>
+    <style>
+        body {
+            background-color: #7bb1f9; /* 外層藍色背景 */
+            padding: 20px;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background-color: #fff; /* 白色容器 */
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* 綠色區塊 (Header) */
+        .header {
+            background-color: #b3d962;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+
+        /* 中間藍色區塊群組 */
+        .content-row {
+            display: flex;
+            flex-wrap: wrap; /* 讓內容在空間不足時換行 */
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .content-item {
+            background-color: #6fb9c7;
+            height: 80px;
+            flex: 1; /* 平分剩餘空間 */
+            min-width: 30%; /* 預設寬度 */
+        }
+
+        /* 下方灰色區塊群組 */
+        .footer-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .footer-item {
+            background-color: #f1f1f1;
+            height: 40px;
+            flex: 1;
+            min-width: 20%; /* 預設寬度 (4欄) */
+        }
+
+        /* --- 關鍵：Media Query 媒體查詢 --- */
+        @media screen and (max-width: 480px) {
+            .content-item {
+                /* 在小螢幕時，強制中間藍色區塊寬度 100% (變回1欄) */
+                min-width: 100%;
+            }
+
+            .footer-item {
+                /* 在小螢幕時，設定寬度約 45% 以達成 2 欄並排 */
+                min-width: 45%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header"></div>
+
+    <div class="content-row">
+        <div class="content-item"></div>
+        <div class="content-item"></div>
+        <div class="content-item"></div>
+    </div>
+
+    <div class="footer-row">
+        <div class="footer-item"></div>
+        <div class="footer-item"></div>
+        <div class="footer-item"></div>
+        <div class="footer-item"></div>
+    </div>
+</div>
+
+</body>
+</html>
